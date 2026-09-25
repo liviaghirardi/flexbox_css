@@ -3,37 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto Flexbox e Formas Geométricas</title>
-  <!-- 1. Inclusão do CSS de forma externa -->
+  <title>Geometria Interativa</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Container principal configurado como Flex Container -->
-  <main class="flex-container">
-    
-    <!-- 2. Criação dos 20 elementos com Formas Geométricas -->
-    <div class="box card-01 shape-square"><span>ITEM 01</span></div>
-    <div class="box card-02 shape-circle"><span>ITEM 02</span></div>
-    <div class="box card-03 shape-triangle"><span>ITEM 03</span></div>
-    <div class="box card-04 shape-diamond"><span>ITEM 04</span></div>
-    <div class="box card-05 shape-pentagon"><span>ITEM 05</span></div>
-    <div class="box card-06 shape-hexagon"><span>ITEM 06</span></div>
-    <div class="box card-07 shape-star"><span>ITEM 07</span></div>
-    <div class="box card-08 shape-rect"><span>ITEM 08</span></div>
-    <div class="box card-09 shape-cross"><span>ITEM 09</span></div>
-    <div class="box card-10 shape-octagon"><span>ITEM 10</span></div>
-    <div class="box card-11 shape-square"><span>ITEM 11</span></div>
-    <div class="box card-12 shape-triangle"><span>ITEM 12</span></div>
-    <div class="box card-13 shape-circle"><span>ITEM 13</span></div>
-    <div class="box card-14 shape-rect"><span>ITEM 14</span></div>
-    <div class="box card-15 shape-diamond"><span>ITEM 15</span></div>
-    <div class="box card-16 shape-star"><span>ITEM 16</span></div>
-    <div class="box card-17 shape-heart"><span>ITEM 17</span></div>
-    <div class="box card-18 shape-circle"><span>ITEM 18</span></div>
-    <div class="box card-19 shape-square"><span>ITEM 19</span></div>
-    <div class="box card-20 shape-hexagon"><span>ITEM 20</span></div>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Geometria Interativa</h1>
+    <span class="badge">CSS Puro (10 Formas)</span>
+  </header>
 
+  <!-- Seção Hero / Título Principal -->
+  <section class="hero">
+    <h2>Galeria de Figuras & Fórmulas Geométricas</h2>
+    <p>Explore conceitos fundamentais da geometria plana com 10 formas estilizadas via CSS puro e suas respectivas fórmulas matemáticas.</p>
+  </section>
+
+  <!-- Grid de Cards Geométricos -->
+  <main class="container">
+    <div class="grid">
+
+      <!-- 1. Quadrado -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-quadrado shape-text">Quadrado</div>
+        </div>
+        <h3 class="card-title">Quadrado</h3>
+        <p class="card-description">Polígono regular de 4 lados iguais e 4 ângulos retos de 90°.</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Lado = l):</div>
+          <div class="formula-row"><strong class="color-quadrado">Área:</strong> A = l²</div>
+          <div class="formula-row"><strong class="color-quadrado">Perímetro:</strong> P = 4 · l</div>
+        </div>
+      </div>
+
+      <!-- 2. Círculo -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-circulo shape-text">Círculo</div>
+        </div>
+        <h3 class="card-title">Círculo</h3>
+        <p class="card-description">Figura geométrica plana formada por pontos equidistantes do seu centro.</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Raio = r):</div>
+          <div class="formula-row"><strong class="color-circulo">Área:</strong> A = π · r²</div>
+          <div class="formula-row"><strong class="color-circulo">Circunferência:</strong> C = 2 · π · r</div>
+        </div>
+      </div>
+
+      <!-- 3. Retângulo -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-retangulo shape-text">Retângulo</div>
+        </div>
+        <h3 class="card-title">Retângulo</h3>
+        <p class="card-description">Quadrilátero com lados opostos paralelos e iguais, possuindo 4 ângulos retos.</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Base = b, Altura = h):</div>
+          <div class="formula-row"><strong class="color-retangulo">Área:</strong> A = b · h</div>
+          <div class="formula-row"><strong class="color-retangulo">Perímetro:</strong> P = 2b + 2h</div>
+        </div>
+      </div>
+
+      <!-- 4. Elipse -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-elipse shape-text">Elipse</div>
+        </div>
+        <h3 class="card-title">Elipse</h3>
+        <p class="card-description">Figura curva fechada com dois eixos: semi-eixo maior (a) e semi-eixo menor (b).</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Semi-eixos = a, b):</div>
+          <div class="formula-row"><strong class="color-elipse">Área:</strong> A = π · a · b</div>
+          <div class="formula-row"><strong class="color-elipse">Perímetro:</strong> P ≈ π · [3(a+b) - √((3a+b)(a+3b))]</div>
+        </div>
+      </div>
+
+      <!-- 5. Losango -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-losango">
+            <div class="shape-text">Losango</div>
+          </div>
+        </div>
+        <h3 class="card-title">Losango</h3>
+        <p class="card-description">Polígono com 4 lados de igual comprimento e diagonais perpendiculares.</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Diagonais = D, d / Lado = l):</div>
+          <div class="formula-row"><strong class="color-losango">Área:</strong> A = (D · d) / 2</div>
+          <div class="formula-row"><strong class="color-losango">Perímetro:</strong> P = 4 · l</div>
+        </div>
+      </div>
+
+      <!-- 6. Triângulo -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-triangulo shape-text">Triângulo</div>
+        </div>
+        <h3 class="card-title">Triângulo</h3>
+        <p class="card-description">Polígono de 3 lados e 3 ângulos. Sua soma de ângulos internos é 180°.</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Base = b, Altura = h):</div>
+          <div class="formula-row"><strong class="color-triangulo">Área:</strong> A = (b · h) / 2</div>
+          <div class="formula-row"><strong class="color-triangulo">Perímetro:</strong> P = a + b + c</div>
+        </div>
+      </div>
+
+      <!-- 7. Trapézio -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-trapezio shape-text">Trapézio</div>
+        </div>
+        <h3 class="card-title">Trapézio</h3>
+        <p class="card-description">Quadrilátero com dois lados paralelos chamados de base maior (B) e base menor (b).</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Bases = B, b / Altura = h):</div>
+          <div class="formula-row"><strong class="color-trapezio">Área:</strong> A = ((B + b) · h) / 2</div>
+          <div class="formula-row"><strong class="color-trapezio">Perímetro:</strong> P = L1 + L2 + L3 + L4</div>
+        </div>
+      </div>
+
+      <!-- 8. Paralelogramo -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-paralelogramo">
+            <div class="shape-text">Paralelogramo</div>
+          </div>
+        </div>
+        <h3 class="card-title">Paralelogramo</h3>
+        <p class="card-description">Quadrilátero com lados opostos paralelos e iguais em comprimento.</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Base = b, Altura = h):</div>
+          <div class="formula-row"><strong class="color-paralelogramo">Área:</strong> A = b · h</div>
+          <div class="formula-row"><strong class="color-paralelogramo">Perímetro:</strong> P = 2a + 2b</div>
+        </div>
+      </div>
+
+      <!-- 9. Pentágono -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-pentagono shape-text">Pentágono</div>
+        </div>
+        <h3 class="card-title">Pentágono</h3>
+        <p class="card-description">Polígono regular de 5 lados de comprimentos iguais e 5 ângulos internos de 108°.</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Lado = l, Apótema = a):</div>
+          <div class="formula-row"><strong class="color-pentagono">Área:</strong> A = (5/2) · l · a</div>
+          <div class="formula-row"><strong class="color-pentagono">Perímetro:</strong> P = 5 · l</div>
+        </div>
+      </div>
+
+      <!-- 10. Hexágono -->
+      <div class="card">
+        <div class="shape-container">
+          <div class="shape-hexagono shape-text">Hexágono</div>
+        </div>
+        <h3 class="card-title">Hexágono</h3>
+        <p class="card-description">Polígono de 6 lados de comprimentos iguais. Pode ser dividido em 6 triângulos equiláteros.</p>
+        <div class="formula-box">
+          <div class="formula-header">Fórmulas (Lado = l):</div>
+          <div class="formula-row"><strong class="color-hexagono">Área:</strong> A = (3√3 / 2) · l²</div>
+          <div class="formula-row"><strong class="color-hexagono">Perímetro:</strong> P = 6 · l</div>
+        </div>
+      </div>
+
+    </div>
   </main>
 
 </body>
