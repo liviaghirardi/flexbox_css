@@ -1,65 +1,55 @@
-# Projeto: Flexbox e Formas Geométricas em CSS
+# Projeto: Geometria Interativa com CSS Puro
 
-Este projeto é uma aplicação prática desenvolvida para demonstrar o uso do **Box Model** do CSS e a manipulação de elementos usando o **Flexbox Layout**, aplicando conceitos de responsividade e estilização moderna através de formas geométricas recortadas e personalizadas.
-
----
-
-## 📋 Requisitos da Atividade
-
-1. **Estrutura de Arquivos Externa**: Criação dos arquivos `index.html` e `style.css`, conectando o CSS externamente via tag `<link rel="stylesheet">` no cabeçalho HTML.
-2. **Manipulação do Box Model (20 Elementos)**:
-   - Inclusão de 20 elementos distintos (`<div>`).
-   - Atribuição explicita de valores para todas as quatro camadas do **Box Model**:
-     - **Content** (`width`, `height`)
-     - **Padding**
-     - **Border**
-     - **Margin**
-3. **Aplicação do Flexbox (20 Propriedades)**: Utilização de 20 propriedades Flexbox distribuídas entre o *Flex Container* e os *Flex Items* para organizar a interface de maneira responsiva.
+Este projeto é uma aplicação web desenvolvida para demonstrar o uso de **CSS3 moderno** (Grid Layout, Flexbox e `clip-path`) na criação e estilização de **10 formas geométricas planas** e na exibição de suas respectivas fórmulas matemáticas de área e perímetro.
 
 ---
 
-## 📐 Conceitos Aplicados
+## 📋 Requisitos do Projeto
 
-### 1. Box Model & Formas Geométricas
-Cada um dos 20 elementos possui dimensões explicitamente definidas de largura/altura, espaçamentos internos (padding), bordas e margens externas. Para transformar os elementos retangulares tradicionais nas formas geométricas vistas em tela, foram utilizadas as seguintes técnicas de CSS:
-- **`border-radius: 50%`**: Para a criação de círculos.
-- **`clip-path: polygon(...)`**: Para recortar o elemento em formas como triângulos, losangos, pentágonos, hexágonos, octógonos, estrelas, cruzes e corações.
+1. **Estrutura de Arquivos Separados**: Arquivos `index.html` e `styles.css` vinculados de forma externa através da tag `<link rel="stylesheet" href="styles.css">`.
+2. **Layout Responsivo com CSS Grid**: Organização dos cards de figuras em uma grade dinâmica e adaptável para diferentes tamanhos de tela.
+3. **Alinhamentos e Distribuição com Flexbox**: Utilização de Flexbox para estruturação interna dos elementos do cabeçalho, hero section, cards e centralização do conteúdo dentro das formas geométricas.
+4. **Formas Geométricas em CSS Puro**: Renderização visual de 10 figuras planas sem a necessidade de imagens externas ou SVGs, utilizando propriedades avançadas de CSS.
 
 ---
 
-## 🛠️ Relação das 20 Propriedades de Flexbox Utilizadas
+## 📐 Figuras Geométricas Implementadas
 
-### No Flex Container (`.flex-container`)
-1. **`display: flex;`** — Define o elemento pai como um container flexível.
-2. **`flex-direction: row;`** — Organiza os itens em linha (direção horizontal principal).
-3. **`flex-wrap: wrap;`** — Permite que os itens quebrem para a próxima linha caso não caibam na mesma.
-4. **`justify-content: space-around;`** — Distribui os elementos uniformemente ao longo do eixo principal com espaço ao redor.
-5. **`align-items: center;`** — Alinha os elementos no centro ao longo do eixo transversal (vertical).
-6. **`align-content: space-between;`** — Distribui as linhas do container com espaço entre elas.
-7. **`gap: 25px;`** — Define um espaçamento geral entre os itens flexíveis.
-8. **`row-gap: 30px;`** — Define o espaçamento específico entre as linhas de itens.
-9. **`column-gap: 20px;`** — Define o espaçamento específico entre as colunas de itens.
+O projeto traz a representação visual e matemática das seguintes 10 formas:
 
-### Nos Flex Items (`.card-01` até `.card-11`)
-10. **`order: 3;`** (`.card-01`) — Altera a ordem padrão de exibição do elemento na fila flex.
-11. **`flex-grow: 1;`** (`.card-02`) — Define a taxa de crescimento do item em relação ao espaço sobressalente.
-12. **`flex-shrink: 2;`** (`.card-03`) — Define a capacidade de encolhimento do item caso haja falta de espaço.
-13. **`flex-basis: 120px;`** (`.card-04`) — Estabelece o tamanho inicial padrão do item antes da distribuição do espaço.
-14. **`align-self: flex-start;`** (`.card-05`) — Sobrescreve o alinhamento vertical geral para alinhar este item ao topo.
-15. **`align-self: flex-end;`** (`.card-06`) — Alinha este item individualmente na base da linha.
-16. **`align-self: center;`** (`.card-07`) — Alinha este item individualmente no centro vertical da linha.
-17. **`align-self: stretch;`** (`.card-08`) — Estica o item individual para ocupar toda a altura da linha.
-18. **`flex: 1 1 110px;`** (`.card-09`) — Propriedade atalho (*shorthand*) combinando `flex-grow`, `flex-shrink` e `flex-basis`.
-19. **`order: -1;`** (`.card-10`) — Move o item para o início absoluto do layout alterando sua prioridade visual.
-20. **`align-self: baseline;`** (`.card-11`) — Alinha o item individualmente ao longo da linha base do texto do container.
+1. **Quadrado**: Criado com dimensões iguais e `border-radius`.
+2. **Círculo**: Estilizado com `border-radius: 50%`.
+3. **Retângulo**: Proporções retangulares com bordas levemente arredondadas.
+4. **Elipse**: Formato oval definido por `border-radius: 50%` com proporções de largura e altura distintas.
+5. **Losango**: Estruturado via transformação espacial `transform: rotate(45deg)`.
+6. **Triângulo**: Recortado com `clip-path: polygon(...)`.
+7. **Trapézio**: Modelado através de polígono customizado em `clip-path`.
+8. **Paralelogramo**: Aplicada a inclinação lateral com `transform: skewX(-20deg)`.
+9. **Pentágono**: Definido por recorte de 5 vértices via `clip-path`.
+10. **Hexágono**: Construído com polígono regular de 6 vértices via `clip-path`.
+
+---
+
+## 🛠️ Conceitos e Técnicas de CSS Utilizadas
+
+### Layout e Estrutura
+- **`display: grid` & `grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))`**: Cria uma grade completamente responsiva que reajusta a quantidade de colunas automaticamente sem a necessidade de múltiplas media queries.
+- **`display: flex`**: Empregado no cabeçalho, no container central das figuras e nas caixas de texto para alinhamento vertical e horizontal dos conteúdos (`justify-content` e `align-items`).
+- **`gap`**: Definição de espaçamentos limpos e uniformes entre os elementos do grid.
+
+### Estilização de Formas
+- **`clip-path: polygon(...)`**: Recorte preciso de polígonos complexos diretamente no CSS.
+- **`transform` (`rotate` e `skewX`)**: Manipulação de rotação e inclinação para criar os formatos de losango e paralelogramo.
+- **`backdrop-filter: blur(...)`**: Efeito de desfoque de fundo no badge do cabeçalho.
+- **`transition` & `:hover`**: Microinterações nos cards para feedback visual de elevação ao passar o mouse (`translateY`).
 
 ---
 
 ## 📱 Responsividade
-Uma media query `@media (max-width: 600px)` foi configurada para reorganizar a orientação do container de `row` para `column` em dispositivos móveis, garantindo visualização adequada.
+O layout adapta-se automaticamente a telas mobile, tablets e desktops graças ao uso de unidades relativas e ao comportamento do `auto-fit` no CSS Grid.
 
 ---
 
 ## 📂 Como Executar o Projeto
-1. Salve o arquivo `index.html` e o arquivo `style.css` na mesma pasta.
+1. Certifique-se de salvar os arquivos `index.html` e `styles.css` no mesmo diretório.
 2. Abra o arquivo `index.html` em qualquer navegador web moderno.
